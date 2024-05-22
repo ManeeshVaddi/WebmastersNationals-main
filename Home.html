@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleHome.css">
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="navigationsyle.css">
+    <link rel="stylesheet" href="questionareStyle.css">
+    <title>Home</title>
+    
+</head>
+<body>
+<nav class="navbar">
+        
+        <div class="logo "><a href="Home.html"><img src="Images/Logo.png"></img></a></div>
+        <ul class="menu-list">
+            <div class="icon cancel-btn">
+                <i class="fas fa-times"> <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>     </i>
+            </div>
+            <li class="button"><button><a href="solarPanel.html">Solar </a></button></li>
+            <li> <a href="#"></a></li>
+            <li class="button"><button><a href="solarWater.html">Hydro </a></button></li>
+            <li> <a href="#"></a></li>
+            <li class="button"><button><a href="wind.html">Wind </a></button></li>
+            <li> <a href="#"></a></li>
+            <li class="button"><button><a href="geothermal.html">Geothermal </a></button></li>
+            <li> <a href="#"></a></li>
+            <li class="button"><button><a href="sources.html">Sources</a></button></li>
+        </ul>
+        <div class="icon menu-btn">
+            <i class="fas fa-bars"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg> </i>
+        </div>
+
+    
+</nav>
+
+
+        <video  loop autoplay muted id="vid">
+            <source src="homevid.mp4" type="video/mp4" />
+        </video>    
+
+        <section>
+            <h1 class="bannerText"> ECOCALC</h1>
+            <br><br>
+            <h3> Webmasters Nationals Team #3137-1</h3>
+        </section>
+    
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
+        <section>
+            <h1 class="what"> What is it?</h1>
+            <p>
+                Green energy, also referred to as Renewable energy, is energy sourced from resources that are available naturally and quickly in nature. This is contrast to fossil fuels which aren't infinite like green energy and they also cause a lot of harm to the environment, unlike green energy. Examples of green energy can include solar power, wind power, hydroelectricity and more. These sources are always going to be available in nature and they cause significantly less harm to nature than fossil fuels. Green energy is the most important factor in fighting back climate change, which is
+heavily caused by fossil fuel extraction.
+            </p>
+    
+        </section>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <h2> Want to know which alternative suits your lifestyle? </h2>
+        
+        <br><br><br>
+
+<section class="questionarre">
+<div class="container">
+
+
+<div id="question1" class="question active">
+    <p class="q">1. Choose your location:</p> 
+    <label><input type="radio" name="locationClimate" value="urban"> Urban area </label><br><br>
+    <label><input type="radio" name="locationClimate" value="suburban"> Suburban area </label><br><br>
+    <label><input type="radio" name="locationClimate" value="rural"> Rural area </label> <br><br>
+    <button onclick="nextQuestion('question1', 'question2')">Next</button>
+</div>
+
+<div id="question2" class="question">
+    <p class="q">2. Select your Monthly energy consumption level:</p> 
+    <label><input type="radio" name="energyConsumption" value="low"> Low (less than 500 kWh)</label><br><br>
+    <label><input type="radio" name="energyConsumption" value="moderate"> Moderate (500-1000 kWh)</label><br><br>
+    <label><input type="radio" name="energyConsumption" value="high"> High (more than 1000 kWh)</label> <br><br>
+    <button onclick="nextQuestion('question2', 'question3')">Next</button>
+</div>
+
+<div id="question3" class="question">
+    <p class="q">3. What is your budget range?</p> 
+    <label><input type="radio" name="budget" value="low"> Low ($1000-$5000)</label><br><br>
+    <label><input type="radio" name="budget" value="moderate"> Moderate ($5000-$10,000)</label><br><br>
+    <label><input type="radio" name="budget" value="high"> High (over $10,000)</label><br><br>
+    <button onclick="nextQuestion('question3', 'question4')">Next</button>
+</div>
+
+ 
+<div id="question4" class="question">
+    <p class="q">4. Do you have suitable space or resources for renewable energy installations?</p> 
+    <label><input type="radio" name="suitableSpace" value="yes"> Yes, I have suitable space/resources</label><br><br>
+    <label><input type="radio" name="suitableSpace" value="no"> No, I don't have suitable space/resources</label><br><br>
+    <button onclick="nextQuestion('question4', 'result'); calculateGreenResource()">Submit</button>
+</div>
+
+<br><br>
+<div id="result"></div>
+<br><br><br><br>
+<button id="resetButton" onclick="resetQuiz()">Reset</button>
+</div>
+</section>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<h2> The 4 Most Common Green Energy Resources</h2>
+
+<br>
+
+<div class="timeline">
+    <ul>
+      <li>
+        <div>
+          <time>Solar Panels</time> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.
+          <br>
+          Click here to learn more! <a href="solarPanel.html"><button> Click Me</button></a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>Solar Water Heating</time> Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Suspendisse finibus mauris et bibendum molestie. Aenean ex augue, varius et pulvinar in, pretium non nisi.
+          <br>
+          Click here to learn more! <a href="solarWater.html"><button> Click Me</button></a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>Wind</time> Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.
+          <br>
+          Click here to learn more! <a href="geothermal.html"><button> Click Me</button></a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>Geothermal</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+          <br>
+          Click here to learn more! <a href="wind.html"><button> Click Me</button></a>
+        </div>
+      </li>
+    </ul>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<script src="economic.js"></script>
+
+<h2> Why?</h2>
+<br><br><br><br><br><br><br>
+
+
+        <div class="slider">
+            <div class="list">
+                <div class="item active">
+                    <div class="image" style="--url: url('Images/image.png')"></div>
+                    <div class="content">
+                        <h2>LET'S ACT</h2>
+                        <p>
+                            Saving the Earth requires a global team effort, and we need your help. With collective action, our impacts will add up and we can sustain our planet for years to come. Not only is this good for the planet, but for your wallet too.               </p>
+                        <p>
+                                                   </p>
+                    </div>
+                </div>
+                <div class="item ">
+                    <div class="image" style="--url: url('Images/forest-fire.jpg')"></div>
+                    <div class="content">
+                        <h2>Wildfires</h2>
+                        <p>
+                            The National Interagency Fire Center has reported that on average, annually there are 70,000 wildfires in around the globe since the 1980s because of global warming.
+                            That is annually 86800 acres of forest land burned annually proabably because some people forgot to turn their stoves off.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="--url: url('Images/drought.jpg')"></div>
+                    <div class="content">
+                        <h2>Droughts</h2>
+                        <p>
+                            The current drought rates in the United States are extremely high due to the impact of fossil fuels. About 10% of the contiguous U.S. is facing severe drought conditions. This is causing significant hardships for farmers in those regions.                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="--url: url('Images/water.jpg')"></div>
+                    <div class="content">
+                        <h2>Water</h2>
+                        <p>
+                            Fossil fuels contaminate freshwater resources through acid rain and other means. Help safeguard water quality and create a sustainable future for generations to come.                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="--url: url('Images/air.jpg')"></div>
+                    <div class="content">
+                        <h2>Pollution and Health</h2>
+                        <p>
+                            Over 8 million people die prematurely every year from air pollution – more than twice as many as from malaria, tuberculosis and HIV/AIDS combined. 
+
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="--url: url('Images/better.jpg')"></div>
+                    <div class="content">
+                        <h2>It's Your Turn</h2>
+                        <p>
+                            Using our custom Ecocalc, you can be sure of your impact and make smart business and household decisions for yourself and our planet.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="arrows">
+                <button id="prev">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
+                    </svg>
+                </button>
+                <button id="next">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <br><br>
+
+
+<script src="scriptHome.js"></script>
+<script src="questionarescript.js"></script>
+<script src="slider.js"></script>
+</body>
+</html>

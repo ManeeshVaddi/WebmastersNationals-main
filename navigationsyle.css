@@ -1,0 +1,131 @@
+
+.navbar {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  padding: 2% 0.5%;
+  height: 4rem;
+  font-size: 150%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo img{
+  height: 50%;
+  width: 50%;
+    margin: 10% 30%;
+  margin-top: 11%;
+
+}
+
+.navbar .menu-list{
+  display: inline-flex;
+  margin-right: 1%;
+}
+
+.menu-list li{
+  list-style: none;
+}
+
+
+.navbar .logo a{
+  color: #fff;
+  font-size: 100%;
+  font-weight: 600;
+  text-decoration: none;
+  justify-self: right;
+}
+
+.menu-list li a{
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  font-size: 100%;
+  font-weight: 500;
+  margin-left: 5px;
+  text-decoration: none;
+  transition: all 0.3 ease;
+}
+
+.menu-list li button {
+  max-width: 400;
+  height: 500;
+  justify-content: space-between;
+  background: transparent;
+  border-width: 1px;
+  border-color: white;
+  padding: 0px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: auto;
+  cursor: pointer;
+  font-size: 100%;
+}
+
+.navbar.sticky {
+  padding: 10px 0;
+  background: rgb(28, 61, 28);
+  z-index: 1000;
+  font-weight: 1000;
+}
+.menu-list li.nav-link:hover{
+  color: cyan;
+  border-bottom: 2px solid rgb(46, 125, 115)  ;
+  padding-bottom: 1px;  
+}
+
+.menu-list li button:hover{
+  background-color: rgb(46, 125, 115) ;
+  color: cyan;
+}
+
+.icon{
+  fill: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.icon.cancel-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+
+}
+
+@media (max-width: 1300px){
+  .icon{
+     display: block;
+  }
+  .icon.hide{
+     display: none;
+  }
+  .navbar .menu-list{
+     position: fixed;
+;
+     top: 0;
+     left: -100%;
+     height: 100vh;
+     width: 100%;
+     max-width: 400px;
+     background: #222;
+     display: block;
+     padding: 40px 0;
+     text-align: center;
+     transition: all 0.7s ease;
+  }
+  .navbar .menu-list.active{
+     left: 0%;
+  }
+  .navbar .menu-list li{
+     margin-top: 45px;
+
+  }
+  .navbar .menu-list li a{
+     font-size: 23px;
+  }
+}
+
+
